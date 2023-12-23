@@ -21,6 +21,7 @@ The code is a bit weird is i wasn't that good with js yet. But it got the job do
 ## Authors
 
 - [@Niveus](https://www.github.com/rayan1159)
+- [Email me](mailto:niveus@nuke.africa)
 
 ## Mcspam source
 
