@@ -1,0 +1,344 @@
+/* Color Swicher CSS */
+
+.switcher {
+    width: 30px !important;
+    height: 40px !important;
+    display: inline-block;
+    margin: 4px 8px;
+    border-radius: 5px;
+    border: 0px solid #000;
+}
+.swichermainleft {
+  width: 100%;
+  float: left;
+}
+.colorcode {
+    display: inline-block;
+    margin: 4px 4px;
+    width: 35px;
+    height: 60px;
+    border-radius: 3px;
+}
+
+.color1{
+	background:linear-gradient(135deg,  rgba(98, 0, 238) 0%, rgba(55, 0, 179) 100%);
+}
+
+.color2{
+	background: linear-gradient(135deg, rgba(4, 82, 212) 0%, rgba(4, 39, 212) 100%);
+}
+
+.color3{
+	background: linear-gradient(135deg, rgba(41, 5, 134) 0%, rgba(126, 81, 236) 100%);
+}
+
+.color4{
+	background: linear-gradient(135deg, rgba(30, 17, 224) 0%, rgba(247, 75, 110) 100%);
+}
+
+.color5{
+	background: linear-gradient(135deg, rgba(115, 1, 99) 0%, rgba(32, 4, 103) 100%);
+}
+
+.color6{
+	background: linear-gradient(135deg, #000428 0%, #004e92 100%);
+}
+
+.color7{
+	background: linear-gradient(135deg, rgba(141, 13, 177) 0%, rgba(114, 13, 177) 100%);
+}
+
+.color8{
+	background: linear-gradient(135deg, rgba(72, 1, 255) 0%, rgba(121, 24, 242) 100%);
+}
+
+.color9{
+	background: linear-gradient(-225deg, rgba(72, 1, 255, 0.85) 0%, rgba(121, 24, 242, 0.85) 48%, rgba(172, 50, 228, 0.85) 100%);
+}
+
+.color10{
+	background: linear-gradient(135deg, rgba(22, 80, 226) 0%, rgba(126, 81, 236) 100%);
+}
+
+
+.full-width .container{  
+    max-width:inherit !important;
+	width:95% !important;	
+	transition:all 0.5s ease;
+}
+.switch_section span {
+    font-size: 13px;
+}
+.unbox {  
+   margin:0; 
+}
+
+.switch_section li{
+    width:100%;
+    height:30px;
+}
+.switch_section {
+    width: 100%;
+    height: auto;
+    list-style: none;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 5px 19px;
+}
+
+/* //////////////////  switch-1  //////////////// */
+.onoffswitch {
+    position: relative;
+    width: 30px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+    
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 15px;
+    padding: 0;
+    line-height: 16px;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch-label:before {
+    content: "";
+	height: 16px;
+    display: block;
+	width: 17px; 
+	margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 13px;
+    border: 1px solid #CCCCCC; border-radius: 15px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #0ca930;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #0ca930;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+}
+
+/* //////////////////  switch-2  //////////////// */
+.onoffswitch2 {
+    position: relative;
+    width: 30px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+    
+}
+.onoffswitch2-checkbox {
+    display: none;
+}
+.onoffswitch2-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 15px;
+    padding: 0;
+    line-height: 16px;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch2-label:before {
+    content: "";
+	height: 16px;
+    display: block;
+	width: 17px; 
+	margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 13px;
+    border: 1px solid #CCCCCC; border-radius: 15px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch2-checkbox:checked + .onoffswitch2-label {
+    background-color: #0ca930;
+}
+.onoffswitch2-checkbox:checked + .onoffswitch-label2, .onoffswitch2-checkbox:checked + .onoffswitch2-label:before {
+   border-color: #0ca930;
+}
+.onoffswitch2-checkbox:checked + .onoffswitch2-label:before {
+    right: 0px; 
+}
+
+/* //////////////////  switch-3  //////////////// */
+.onoffswitch3 {
+    position: relative;
+    width: 30px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+    
+}
+.onoffswitch3-checkbox {
+    display: none;
+}
+.onoffswitch3-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 15px;
+    padding: 0;
+    line-height: 16px;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch3-label:before {
+    content: "";
+	height: 16px;
+    display: block;
+	width: 17px; 
+	margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 13px;
+    border: 1px solid #CCCCCC; border-radius: 15px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch3-checkbox:checked + .onoffswitch3-label {
+    background-color: #0ca930;
+}
+.onoffswitch3-checkbox:checked + .onoffswitch-label3, .onoffswitch3-checkbox:checked + .onoffswitch3-label:before {
+   border-color: #0ca930;
+}
+.onoffswitch3-checkbox:checked + .onoffswitch3-label:before {
+    right: 0px; 
+}
+.light-color .card{
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.2);
+    background-clip: border-box;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2);
+}
+.light-color .horizontalMenu{
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.light-color .header .form-inline .form-control {
+    border-color: rgba(255,255,255,0.1);
+	background: rgba(255,255,255,0.2);
+}
+.light-color .footer{
+	background: rgba(255,255,255,0.2);
+	border-top: 1px solid rgba(225, 225, 225, 0.2);
+}
+.light-color .card:hover {
+	box-shadow:0 16px 26px 0 rgb(0,0,0,0.09), 0 3px 6px 0 rgb(0,0,0,0.09);
+}
+.light-color .socailicons i {
+    font-size: 126px;
+    text-align: right;
+    position: absolute;
+    top: -21px;
+    right: -29px;
+    overflow: hidden;
+    padding: 12px;
+    border-radius: 0 0 0 34%;
+    outline: none;
+    color: rgb(0, 0, 0,0.2);
+    text-shadow: none;
+    z-index: 0;
+}
+.light-color .wrap-login100 {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.2);
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 137px 130px 137px 95px;
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.06);
+}
+@media only screen and (max-width: 991px){
+	.light-color .page-header {
+		background: rgba(255,255,255,0.2);
+		border-radius: 3px;
+		padding: 15px;
+	}
+}
+.light-color .countdown-timer-wrapper .timer .timer-wrapper .time {
+	background:linear-gradient(to bottom right ,rgb(255,255,255,0.2),rgb(255,255,255,0.2)); 
+	border:1px solid rgba(255,255,255,0.1);
+}
+ .light-color .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel {
+    background: rgba(255,255,255, 0.2);
+}
+.light-color  .cbp_tmtimeline>li .cbp_tmlabel {
+    background: rgba(255,255,255, 0.2);
+}
+ .light-color .cal1 .clndr .clndr-table tr .day.event, .cal1 .clndr .clndr-table tr .day.my-event {
+    background: rgba(0, 0, 0, 0.3);
+}
+.light-color .richText .richText-toolbar {
+    background: rgba(0,0,0,0.3);
+}
+ .light-color .note-popover .popover-content, .card-header.note-toolbar {
+    background: rgba(0,0,0,0.3);
+}
+.light-color .example-bg {
+    background: rgba(0,0,0, 0.1);
+}
+.light-color .horizontal-main2 .horizontalMenu>.horizontalMenu-list>li>a.active {
+    color: rgba(255, 255, 255);
+    background: rgba(0,0,0,0.3);
+}
+.light-color .productdec {
+    background: rgba(0,0,0,0.3);
+}
+.light-color .panel.price {
+    background: rgba(255, 255, 255,0.2);
+}
+.light-color .fc-bgevent-skeleton .fc-bgevent {
+    background-color: rgba(255,255,255,0.4) !important;
+}
+.light-color .jumbotron {
+    background-color: rgba(0,0,0,0.3);
+}
+.light-color .bg-gray {
+    background: #75838a !important;
+}
+.light-color .header .form-inline .form-control{
+	background:rgba(255,255,255,0.2);
+	border:1px solid rgba(255,255,255,0.2);
+}
+.light-color .demo-icon.bg_dark{
+	background-color:#fff;
+}
+.light-color .demo-icon i{
+	color:#000;
+}
+.light-color .access-container{
+	background:rgba(255,255,255,0.2);
+	border:1px solid rgba(255,255,255,0.2);
+}
+.colorcode.active{
+	position:relative;
+}
+.colorcode.active:before{
+	content: "\f058";
+    position: absolute;
+    top: 0;
+    right: 5px;
+    display: block;
+    font-family: 'FontAwesome';
+    color: #ffffff;
+}

@@ -1,0 +1,422 @@
+<!Doctype html>
+<html lang="en" dir="ltr">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+<head>
+    <base href="/">
+    <!-- META DATA -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Polyboot - A efficient network stress testing tool">
+    <meta name="author" content="Niveus">
+    <meta name="keywords" content="booter, ddos, stresser, ip booter, ip stresser, stress testing">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/brand/favicon.ico"/>
+
+    <!-- TITLE -->
+    <title>Polyboot - Dashboard</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- STYLE CSS -->
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/boxed.css" rel="stylesheet"/>
+    <link href="css/dark-boxed.css" rel="stylesheet"/>
+    <link href="css/skin-modes.css" rel="stylesheet"/>
+
+    <!--C3 CHARTS CSS -->
+    <link href="plugins/charts-c3/c3-chart.css" rel="stylesheet"/>
+
+
+    <!-- CUSTOM SCROLL BAR CSS-->
+    <link href="plugins/p-scroll/perfect-scrollbar.css" rel="stylesheet"/>
+
+    <link href="plugins/datatable/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+
+    <!-- SELECT2 CSS -->
+    <link href="plugins/select2/select2.min.css" rel="stylesheet"/>
+
+    <!--- FONT-ICONS CSS -->
+    <link href="plugins/icons/icons.css" rel="stylesheet"/>
+
+    <!-- Switcher css -->
+    <link href="switcher/css/switcher.css" rel="stylesheet" id="switcher-css" type="text/css" media="all"/>
+    <link href="switcher/css/demo.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
+    <!-- COLOR SKIN CSS -->
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="colors/color1.css"/>
+
+
+</head>
+<body class="dark-mode">
+<!-- End Switcher -->
+
+<!-- GLOBAL-LOADER -->
+<div id="global-loader">
+    <img src="images/loader.svg" class="loader-img" alt="Loader">
+</div>
+<!-- /GLOBAL-LOADER -->
+
+<!-- PAGE -->
+<div class="page">
+
+    <div class="page-main">
+
+        <!--APP-SIDEBAR-->
+        <div class="header hor-header">
+            <div class="container">
+                <div class="d-flex">
+                    <div class="">
+                        <a class="header-brand header-brand1" href="/dashboard">
+                            <h2>Polyboot</h2>
+                        </a><!-- LOGO -->
+                    </div>
+                    <a class="animated-arrow hor-toggle horizontal-navtoggle"><span></span></a>
+                    <div class="d-flex  ml-auto header-right-icons">
+                        <div class="dropdown d-md-flex">
+                            <a class="nav-link icon full-screen-link nav-link-bg">
+                                <i class="fe fe-minimize fullscreen-button"></i>
+                            </a>
+                        </div><!-- FULL-SCREEN -->
+                        <div class="dropdown profile-1">
+                            <a href="#" data-toggle="dropdown" class="nav-link pr-2 leading-none d-flex">
+                                <span>
+                                    <img src="images/users/15.jpg" alt="profile-user"
+                                         class="avatar  profile-user brround cover-image">
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                <div class="drop-heading">
+                                    <div class="text-center">
+                                        <h5 class="text-dark mb-0">Devid Antoni</h5>
+                                        <small class="text-muted">Administrator</small>
+                                    </div>
+                                </div>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item" href="-profile">
+                                    <i class="dropdown-icon mdi mdi-account-outline"></i> Profile
+                                </a>
+                                <div class="dropdown-divider mt-0"></div>
+                                <a class="dropdown-item" href="/faq">
+                                    <i class="dropdown-icon mdi mdi-compass-outline"></i> Need help?
+                                </a>
+                                <a class="dropdown-item" id="logout">
+                                    <i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--APP-SIDEBAR-->                <!--/Horizontal-main -->
+        <div class="sticky">
+            <div class="horizontal-main hor-menu clearfix">
+                <div class="horizontal-mainwrapper container clearfix">
+                    <!--Nav-->
+                    <nav class="horizontalMenu clearfix">
+                        <ul class="horizontalMenu-list">
+                            <li aria-haspopup="true"><a href="/dashboard" class="sub-icon"><i class="fe fe-airplay"></i>
+                                Dashboard</a></li>
+                        </ul>
+                        <ul class="horizontalMenu-list">
+                            <li aria-haspopup="true"><a href="/admin/news" class="sub-icon"><i
+                                    class="fe fe-feather"></i> News</a></li>
+                        </ul>
+                        <ul class="horizontalMenu-list">
+                            <li aria-haspopup="true"><a href="/admin/plans" class="sub-icon"><i class="fe fe-list"></i>
+                                Plans</a></li>
+                        </ul>
+                        <ul class="horizontalMenu-list">
+                            <li aria-haspopup="true"><a href="/admin/users" class="sub-icon"><i class="fe fe-user"></i>
+                                Users</a></li>
+                        </ul>
+                        <ul class="horizontalMenu-list">
+                            <li aria-haspopup="true"><a href="/admin/licenses" class="sub-icon"><i
+                                    class="fe fe-lock"></i> Licenses</a></li>
+                        </ul>
+                    </nav>
+                    <!--Nav-->
+                </div>
+            </div>
+        </div>
+        <!--/Horizontal-main -->                <!-- Mobile Header -->
+        <div class="mobile-header">
+            <div class="container-fluid">
+                <div class="d-flex">
+                    <a class="animated-arrow hor-toggle horizontal-navtoggle"><span></span></a>
+                    <a class="header-brand header-brand1" href="/dashboard">
+                        <h2>Polyboot</h2>
+                    </a><!-- LOGO -->
+                    <div class="d-flex order-lg-2 ml-auto header-right-icons">
+                        <button class="navbar-toggler navresponsive-toggler d-md-none" type="button"
+                                data-toggle="collapse" data-target="#navbarSupportedContent-4"
+                                aria-controls="navbarSupportedContent-4" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon fe fe-more-vertical text-white"></span>
+                        </button>
+                        <div class="dropdown profile-1">
+                            <a href="#" data-toggle="dropdown" class="nav-link pr-2 leading-none d-flex">
+										<span>
+											<img src="assets/images/users/15.jpg" alt="profile-user"
+                                                 class="avatar  profile-user brround cover-image">
+										</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                <div class="drop-heading">
+                                    <div class="text-center">
+                                        <h5 class="text-dark mb-0">Devid Antoni</h5>
+                                        <small class="text-muted">Administrator</small>
+                                    </div>
+                                </div>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item" href="#">
+                                    <i class="dropdown-icon mdi mdi-account-outline"></i> Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="dropdown-icon  mdi mdi-settings"></i> Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <span class="float-right"></span>
+                                    <i class="dropdown-icon mdi  mdi-message-outline"></i> Inbox
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="dropdown-icon mdi mdi-comment-check-outline"></i> Message
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">
+                                    <i class="dropdown-icon mdi mdi-compass-outline"></i> Need help?
+                                </a>
+                                <a class="dropdown-item" href="login.html">
+                                    <i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown d-md-flex header-settings">
+                            <a href="#" class="nav-link icon " data-toggle="sidebar-right" data-target=".sidebar-right">
+                                <i class="fe fe-align-right"></i>
+                            </a>
+                        </div><!-- SIDE-MENU -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-1 navbar navbar-expand-lg  responsive-navbar navbar-dark d-md-none bg-white">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                <div class="d-flex order-lg-2 ml-auto">
+                    <div class="d-sm-flex">
+                        <a href="#" class="nav-link icon search-btn">
+                            <i class="fe fe-search"></i>
+                        </a>
+                        <div class="search-area">
+                            <div class="close-btn pull-right">
+                                <button class="btn"><i class="fe fe-x"></i></button>
+                            </div>
+                            <form>
+                                <div class="row">
+                                    <div class="input-group form-btn">
+                                        <div class="input-group-append">
+                                            <button class="btn" type="button"><i class="fa fa-search"></i></button>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Search here..."
+                                               aria-label="Recipient's username">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!-- SEARCH -->
+
+                </div>
+            </div>
+        </div>
+        <!-- /Mobile Header -->
+        <!--app-content open-->
+        <div class="app-content">
+            <div class="container">
+
+                <!-- PAGE-HEADER -->
+                <div class="page-header">
+                    <ol class="breadcrumb"><!-- breadcrumb -->
+                        <li class="breadcrumb-item"><a href="#"><h3 class="mb-0 breadcrump-tittle">Welcome To
+                            Polyboot</h3></a></li>
+                    </ol><!-- End breadcrumb -->
+                </div>
+                <!-- PAGE-HEADER END -->
+
+                <div class="col-md-12 col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">User overview</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table card-table table-vcenter text-nowrap" id="user_table">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Username</th>
+                                    <th>Plan</th>
+                                    <th>Edit</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{#each user}}
+                                    <tr>
+                                        <th>{{ this.dataValues.ID }}</th>
+                                        <td>{{ this.dataValues.username }}</td>
+                                        <td>{{ this.dataValues.plan }}</td>
+                                        <td><a class="rounded btn btn-success col-12" href="/admin/user/edit?ID={{ this.dataValues.ID }}">Edit {{ this.dataValues.username }}</a></td>
+                                    </tr>
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- table-responsive -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- CONTAINER END -->
+    </div>
+
+    <!-- SIDE-BAR CLOSED -->
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-md-12 col-sm-12 text-center">
+                    Copyright © 2021 <a href="#">Polyboot</a>. Designed by <a href="#"> Niveus </a> All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+    <!-- BACK-TO-TOP -->
+    <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <!-- JQUERY JS -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            let notyf = new Notyf();
+
+            $('#create').on('click', () => {
+                let name = $('#name').val();
+                let time = $('#time').val();
+
+                if (name && time) {
+                    $.ajax('admin/post/plans/create', {
+                        type: 'POST',
+                        data: {
+                            name: name,
+                            time: time
+                        }
+                    }).then(data => {
+                        switch (data.message) {
+                            case 'plan created':
+                                notyf.success("Plan has been created");
+                                setTimeout(() => {
+                                    window.location = window.location
+                                }, 2500);
+                            break;
+                        }
+                    })
+                } else {
+                    notyf.error("Missing input")
+                }
+            })
+
+            $('button[class^="btn btn-danger col-12 delete').on('click', function () {
+
+            })
+        })
+    </script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="plugins/bootstrap/js/popper.min.js"></script>
+
+    <!-- SPARKLINE JS-->
+    <script src="plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- CHART-CIRCLE JS-->
+    <script src="plugins/circle-progress/circle-progress.min.js"></script>
+
+    <!-- RATING STARJS -->
+    <script src="plugins/rating/jquery.rating-stars.js"></script>
+
+    <!--HORIZONTAL JS-->
+    <script src="plugins/horizontal-menu/horizontal-menu.js"></script>
+
+    <script src="plugins/datatable/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/datatable/datatable.js"></script>
+    <script src="plugins/datatable/datatable-2.js"></script>
+    <script src="plugins/datatable/dataTables.responsive.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#user_table').DataTable();
+        })
+    </script>
+
+    <!-- CUSTOM SCROLLBAR JS-->
+    <script src="plugins/p-scroll/perfect-scrollbar.js"></script>
+    <!-- <script src="https://laravel.spruko.com/flaira/ltr/assets/plugins/p-scroll/p-scroll.js"></script> -->
+    <script src="plugins/p-scroll/p-scroll-1.js"></script>
+
+    <!-- SIDEBAR JS -->
+    <script src="plugins/sidebar/sidebar.js"></script>
+
+    <!-- SELECT2 JS -->
+    <script src="plugins/select2/select2.full.min.js"></script>
+
+
+    <!-- Moment js-->
+    <script src="plugins/moment/moment.min.js"></script>
+
+    <!-- FLOT CHART JS -->
+    <script src="plugins/jquery.flot/jquery.flot.js"></script>
+    <script src="plugins/jquery.flot/jquery.flot.pie.js"></script>
+    <script src="plugins/jquery.flot/jquery.flot.resize.js"></script>
+    <script src="js/chart.flot.sampledata.js"></script>
+
+    <!-- PIETY CHART JS-->
+    <script src="plugins/peitychart/jquery.peity.min.js"></script>
+    <script src="plugins/peitychart/peitychart.init.js"></script>
+
+    <!-- ECHART JS-->
+    <script src="plugins/echarts/echarts.js"></script>
+
+    <!-- CHARTJS CHART JS-->
+    <script src="plugins/chart/Chart.bundle.js"></script>
+    <script src="plugins/chart/utils.js"></script>
+
+    <!-- DATEPICKER JS -->
+    <script src="plugins/date-picker/spectrum.js"></script>
+    <script src="plugins/date-picker/jquery-ui.js"></script>
+
+    <!-- APEXCHART JS -->
+    <script src="js/apexcharts.js"></script>
+
+    <!-- INDEX JS -->
+    <script src="js/index1.js"></script>
+
+
+    <!-- Switcher js -->
+    <script src="switcher/js/switcher.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="js/custom.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+</div>
+
+</body>
+</html>

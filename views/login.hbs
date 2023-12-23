@@ -1,0 +1,187 @@
+<!Doctype html>
+<html lang="en" dir="ltr">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+<head>
+    <base href="/">
+
+    <!-- META DATA -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Polyboot - An efficient network stress testing tool">
+    <meta name="author" content="Niveus">
+    <meta name="keywords" content="booter, ddos, stresser, ip booter, ip stresser, stress testing">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/brand/favicon.ico"/>
+
+    <!-- TITLE -->
+    <title>Polyboot - Login</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- STYLE CSS -->
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/skin-modes.css" rel="stylesheet"/>
+
+    <!-- SIDE-MENU CSS -->
+    <link href="css/sidemenu.css" rel="stylesheet">
+
+    <!--C3 CHARTS CSS -->
+    <link href="plugins/charts-c3/c3-chart.css" rel="stylesheet"/>
+
+
+    <!-- SINGLE-PAGE CSS -->
+    <link href="plugins/single-page/css/main.css" rel="stylesheet" type="text/css">
+
+
+    <!-- CUSTOM SCROLL BAR CSS-->
+    <link href="plugins/p-scroll/perfect-scrollbar.css" rel="stylesheet"/>
+
+    <!-- SELECT2 CSS -->
+    <link href="plugins/select2/select2.min.css" rel="stylesheet"/>
+
+    <!--- FONT-ICONS CSS -->
+    <link href="plugins/icons/icons.css" rel="stylesheet"/>
+
+    <!-- Switcher css -->
+    <link href="switcher/css/switcher.css" rel="stylesheet" id="switcher-css" type="text/css" media="all"/>
+    <link href="switcher/css/demo.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
+    <!-- COLOR SKIN CSS -->
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="colors/color1.css"/>
+</head>
+<body class="login-img dark-mode">
+
+<div id="global-loader">
+    <img src="images/loader.svg" class="loader-img" alt="Loader">
+</div>
+<!-- /GLOBAL-LOADER -->
+
+<!-- PAGE -->
+<div class="page h-100">
+
+
+    <div class="">
+        <!-- CONTAINER OPEN -->
+        <div class="col col-login mx-auto">
+            <div class="text-center">
+                <img src="assets/images/brand/logo-white.png" class="header-brand-img" alt="">
+            </div>
+        </div>
+
+        <div class="container-login100">
+            <div class="wrap-login100 p-6">
+                <form class="login100-form validate-form">
+                    <span class="login100-form-title">Login</span>
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="username" placeholder="Your username">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="zmdi zmdi-account-circle" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="password" id="password" placeholder="Your password">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="zmdi zmdi-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="container-login100-form-btn">
+                        <a id="login" class="login100-form-btn btn-primary">
+                            Login
+                        </a>
+                    </div>
+                    <div class="text-center pt-3">
+                        <p class="text-dark mb-0">Not a member?<a href="/register" class="text-primary ml-1">Sign UP now</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- CONTAINER CLOSED -->
+    </div>
+
+
+</div>
+<!-- End PAGE -->
+<!-- JQUERY JS -->
+<script src="plugins/jquery/jquery.min.js"></script>
+
+<!-- BOOTSTRAP JS -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/bootstrap/js/popper.min.js"></script>
+
+<!-- CHART-CIRCLE JS-->
+<script src="plugins/circle-progress/circle-progress.min.js"></script>
+
+<!-- RATING STARJS -->
+<script src="plugins/rating/jquery.rating-stars.js"></script>
+
+<!-- INPUT MASK PLUGIN-->
+<script src="plugins/input-mask/jquery.mask.min.js"></script>
+
+<!-- SELECT2 JS -->
+<script src="plugins/select2/select2.full.min.js"></script>
+
+<script src="plugins/sweet-alert/sweetalert.min.js"></script>
+
+<!-- Switcher js -->
+<script src="switcher/js/switcher.js"></script>
+
+<!-- CUSTOM JS-->
+<script src="js/custom.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#login').on('click', function () {
+            let username = $('#username').val();
+            let password = $('#password').val();
+
+            let notyf = new Notyf();
+
+            if (username && password) {
+                $.ajax('post/login', {
+                    type: 'POST',
+                    data: {
+                        username: username,
+                        password: password
+                    }
+                }).then(data => {
+                    switch(data.message) {
+                        case 'ok':
+                            notyf.success("You're logged in. Redirecting");
+                            setTimeout(() => {
+                                window.location = '/dashboard'
+                            }, 2500)
+                        break;
+
+                        case 'user banned':
+                            notyf.error("Account has been disabled");
+                        break;
+
+                        case 'invalid password':
+                            notyf.error("Invalid password specified")
+                        break;
+
+                        case 'not found':
+                            notyf.error("User not found in database");
+                        break;
+                    }
+                }).catch(err => {
+                    console.log(err);
+                })
+            } else {
+                notyf.error("Form input is missing")
+            }
+        })
+    })
+</script>
+
+</body>
+
+</html>
