@@ -1,7 +1,7 @@
 
-# Project Title
+# Wtf is this?
 
-An old source i made back somewhere in 2021 that i found on an old drive.
+An old ip booter source i made back somewhere in 2021 that i found on an old drive.
 I have not checked if it works properly, this is up to you if you want to use it.
 Feel free to do whatever you want with it. I don't care. I will not provide support for this source
 
