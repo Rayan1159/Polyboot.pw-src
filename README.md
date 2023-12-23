@@ -24,4 +24,4 @@ The code is a bit weird is i wasn't that good with js yet. But it got the job do
 
 ## Mcspam source
 
-https://github.com/Rayan1159/Official-MCSpam.pw-SRC/settings
+https://github.com/Rayan1159/Official-MCSpam.pw-SRC
